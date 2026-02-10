@@ -10,7 +10,8 @@ public void setup() {
 
 public void draw() {
   background(limit/2, limit/2, limit/2);
-  t++;
+  if (t < 1000)
+    t++;
   limit = (int)(500*Math.abs(Math.sin(t/20)));
   drawPeak(350, 350, 675, limit);
 }
@@ -24,4 +25,5 @@ public void drawPeak(int x, int y, int len, int small) {
     drawPeak(x+len/4, y+len/4, len/2,small);
   }
 }
+
 
